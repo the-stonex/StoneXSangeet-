@@ -10,15 +10,15 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 from pyrogram import filters
 
 import config
-from AnieXEricaMusic import app
-from AnieXEricaMusic.misc import HAPP, SUDOERS, XCB
-from AnieXEricaMusic.utils.database import (
+from YTMUSIC import app
+from YTMUSIC.misc import HAPP, SUDOERS, XCB
+from YTMUSIC.utils.database import (
     get_active_chats,
     remove_active_chat,
     remove_active_video_chat,
 )
-from AnieXEricaMusic.utils.decorators.language import language
-from AnieXEricaMusic.utils.pastebin import AMBOTBin
+from YTMUSIC.utils.decorators.language import language
+from YTMUSIC.utils.pastebin import AMBOTBin
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
