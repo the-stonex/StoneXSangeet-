@@ -18,7 +18,7 @@ from YTMUSIC.utils.database import (
     remove_active_video_chat,
 )
 from YTMUSIC.utils.decorators.language import language
-from YTMUSIC.utils.pastebin import AMBOTBin
+from YTMUSIC.utils.pastebin import YTBin
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
