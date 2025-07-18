@@ -4,24 +4,24 @@ FROM python:3.10-bullseye
 RUN curl -fsSL https://deb.nodesource.com/setup_19.x | bash - \
     && apt-get install -y nodejs
 
-# Install required packages safely (no buster error)
+# Install system packages
 RUN apt-get update \
  && apt-get install -y --no-install-recommends ffmpeg aria2 \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
-WORKDIR /app/
+WORKDIR /app
 
-# Copy all files
+# Copy project files
 COPY . .
 
 # Install Python dependencies
 RUN python -m pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make sure start file is executable
-RUN chmod +x start
+# Optional: Make sure start.py is executable
+RUN chmod +x start.py
 
-# Start the app
-CMD ["bash", "start"]
+# Start the bot
+CMD ["python3", "start.py"]
