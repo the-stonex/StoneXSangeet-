@@ -2,6 +2,7 @@
   "name": "YTMusic",
   "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
   "logo": "https://telegra.ph/Aviax-02-24",
+  "stack": "container",
   "keywords": [
     "python3",
     "telegram",
@@ -57,16 +58,5 @@
       "value": "",
       "required": true
     }
-  },
-  "buildpacks": [
-    {
-      "url": "heroku/python"
-    },
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-    }
-  ]
+  }
 }
